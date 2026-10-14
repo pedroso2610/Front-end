@@ -1,0 +1,93 @@
+//É o que vai custumizar/Personalizar meu site.
+//1- 2 jeitos de trabalhar css: 1- vamos abrir uma tag "style" na parte de head do codigo, é dar estilo a cada tag que a gente quiser, ex: head{background color "azul"}, exemplo meramente ilustrativo, podemos configurar os estilos desse jeito. Sempre vamos colocando um comando e ";" , dentro das chaves.
+//2- Segundo jeito é a gente criar um arquivo.css(temos que colocar primeiro de tudo @charset "UTF-8", para não ter incompatibilidade de caracteres) e colocar(sem a tag style) os estilos diretos de cada tag no arquivo, dai para vincular ao arquivo html vamos lá no head do html e colocar "link::css" e enter, dai na parte de "href" vamos colocar o arquivo css que realiza a conexão.
+//3-tem até um terceiro jeito, porém ele não viavel, mas é na propria tag(seria a primeira) você botar style e descrever como serão as coisas nessa especifica tag.
+//4- Um adendo, a tag mais especifica, que foi selecionada o estilo, será a que vai mudar o conteudo. Ex: Mudei o estilo do body, mas ele só vai influenciar o <p> se não houver nenhum estilo que sobrepõe o estilo da tag body.
+//1-Cores: O estudo de cores acho bom ver na pagina 4 desse pdf file:///C:/Users/Soneca/Downloads/13%20-%20Cores.pdf o que cada cor representa na hora de colocar no site.
+//1.1-Adendo, texto explicativo sempre estará em um fundo branco
+//2-Colocar no codigo: em cada tag (dentro da tag style ou parenteses de style) temos que colocar o comando como "background color", para o fundo, e "color", para o conteudo. Com isso, temos 2 jeitos de selecionar a cor, com control espaço e seleciona ou a função rgba(red,green,blue,iluminação) que define o quanto tem dos 4. Porém utilizaremos o seguinte comando, seleciona por nome (control espaço) passo o cursor por cima que vai definir exatamente a cor que quer, e consequentemente já transforma para rgba.
+//3-Adobe color: Podemos colocar de outro jeito no codigo que atraves de uma maneira hexadecimal(background color: #00AAFF) que define do mesmo jeito o tanto de red, green e blue. E pegamos no adobe colors na parte de explore, a paleta de cores que queremos trabalhar, sendo que o espectro cromastico é a ferramenta mais utilizada para o estudo de psicologia das cores.Pode pegar uma imagem e jogar no app pra detectar todas as cores também
+//4-Collorzilla: Podemos pegar cores também atraves do collor zilla, exetensão do chrome que vai dar o codigo em hexadecimal de uma cor encontrada em um determinado site.
+//5-Como realizar um degrade no fundo do site: vamos configurar a parte do body, e iremos colocar "min-height: 100vh;" "background: linear-gradient(to bottom, blue, white);". A primeira parte é para informar que o degrade irá prencher a tela toda que se encontra a tag (util com direções de top ou bottom), e a logica do degrade é (aqui informa a direção(to right, to button, to top, 45deg(isso é angulo)), aqui informa cor, de novo cor, quantas quiser), pode colocar a procetagem da cor que vai aparecer tambem. 
+//Caso veja um *{}, isso significa que é uma configuração que vai servir para todas as tags, css global.
+//Caso veja h1, p, etc{}. Significa que as tags respectivas terão tal configuração.
+
+//1-Tipografia: resumindo a parte teórica, cada letra é representada por um **glifo**, que possui um conjunto de características visuais próprias, relacionadas à anatomia das letras, como hastes, braços, pernas, serifas e outros elementos. Quando um mesmo conjunto de características é aplicado de forma consistente a todos os glifos, temos uma **fonte**.
+//2-Além disso, uma fonte pode pertencer a uma **família tipográfica**, composta por variações da mesma fonte que mantêm a identidade visual básica, diferenciando-se apenas em algumas características, como a espessura dos traços (leve, regular, negrito), a inclinação (itálico) ou outros ajustes visuais relacionados ao espaçamento e ao estilo.
+//3-Dentro disso, temos as principais divisões dessas fontes: 1-Serifadas(é um pezinho em baixo da letra que faz a gente imaginar uma linha horizontal na frase)(recomendadas para impressão em papel e Titulos). 2-Não serifadas(Recomendada em um texto explicativo no site). 3-Monoespaçadas(cada letra tem o mesmo espaço, utilizado para codigos fonte).4-Handwriting(Parece escrita a mão).5-display(não possui nenhuma caracteristica anterior).
+//4-font-family: Colocar fonte no css: vamos colocar o comando "font-family:alguma coisa;",Fonte mais comum é a Arial, podemos dar control esspaço para selecionar a fonte ou combinação de fontes seguras. Porque esxistem combinações? Pois alguns navegadores podem não reconhcer o tipo de fonte, dai colocamos varias fontes da, da ordem da esquerda para a direita, que ele pode aceitar. Lembre-se, define a categoria de familia que você quer para sua fonte e selecione com control espaço.
+//5-font-size: Colocar o tamanho da fonte: Resumindo, usaremos "font-size:1em;". Porém, existem medidas absolutas: cm, mm, pt. E medidas relativas, que vão de acordo com a tela do espectador: em,vh,vm. E usamos 1 em que é o recomendado por orgão que esqueci o nome.
+//6-font-weight: Define o quão marcante a cor pode ser, tem o leve, normal, bold e bolder.
+//7-font-style: Define se vai ser italico ou normal a escrita
+//8-Shorthand:"font: italic bold 1em Arial, Helvetica;". É um shorthand para style, weight, size e family, respectivamente, para a fonte, 4 linhas de codigo em 1. As 4 funções acima.
+//9-Pegar fontes no google font: Vamos acessar no google font a fonte que você quer, dai você vai na opção de importar, que terá 2 codigos para colcar:1- com um @, cole ele dentro da tag style apenas. 2-Um codigo com os comandos de font que vimos acima, copie e cole ele na tag que você quer.
+//10- Usando fontes, sem ser do google font, primeiro ela será baixada no arquivo e tem que estar na mesma pasta ou subpasta do codigo. E vamos adicionar essa fonte com "@font-face{Font-family:"Nome que a gente quiser aqui"; src:url("Diretorio aqui da fonte");format('opentype/truetype')}" o formato depende se for otf ou ttf, respectivamente. Dai chamamos essa fonte em outra tag com o nome que a gente deu em font-family.
+//11-Capturar fontes em um site: Use fonts Ninja para detectar a fonte e baixa e siga
+//12-Alinhamento de textos:  text-align: center/right/left/justify. Esse é comando para manipular o texto, lembrando que justify alinha a esquerda e a direita do texto
+//13-Colocar espamento inicial no texto: text-indent: 30px. Usamos isso para dar a margem inicial do paragrafo, 30px é referência.
+//14-Retirar qualquer sublinhado de um texto: text-decoration:none;. Para colocar um sublinhado: text-decoration: underline;
+//15-"line-height: xem". Tamanho do espaço entre linhas de um paragrafro
+
+//1-Id: <tag id="Nome">. Serve para colocar um identificador para eu diferenciar uma tag de mesmo nome e mexer apenas nela. O nome de uma Id é unica para apenas uma tag por pagina.
+//2-Chamamos no css a tag com o id que demos o nome assim: tag#Nome{}
+//3-class: <tag class="Nome>". Também serve para eu mudar tags especificas de mesmo nome de outras, a diferença do id é que class serve para multiplas tags por pagina, pode usar o mesmo nome de class em varia tags.
+//4-Chamamos no css as tags com class que demos o nome assim: .Nome{}
+//5-Pseudo-class: tag:hover{} ou tag:active{} . Pseudo-class são configurações que damos para as tags após a realização de alguma ação do usuario as 2 que destacamos funcionam, respectivamente no css, passando o cursor por cima de tal tag acontece algo e enquanto estou clicando o espaço de tal tag acontece outra coisa. Existem muitas outras
+// 6-Pseudo-elemntos: tag::after{content:'algo';} ou tag::before{content:'algo'}. Pseudo-elementos são acrescentos que damos a uma determinada tag antes ou depois dela. Praticamente, adicionar texto antes ou depois de uma tag.
+//7-tagPai>tagFilha, podemos realizar o sinal de > para indicar que queremos configurar uma tag que está dentro de outra tag(tag filha), dai usamos as pseudos classes ou elementos.
+//8-Perceba que Resumindo: "#" identificador; "." class; ":" pseudo-class;"::" pseudo-elementos; ">" Tag filha.
+
+//Tag "div": É apenas uma tag que não realiza nada, serve apenas para marcar um espaço para eu realizar algo com css. Porém, ela é uma caixa do tipo box-level
+//Tag "span": Também é uma tag que não realiza nada, serve apenas para marcar um espaço para eu realizar operações com css.Porém, ela é uma caixa do tipo in-line level
+//lembre-se que podemos trocar o tipo da caixa com display
+
+//1-Caixas: antes de falar sobre caixas é bom explicar que existem 2 tipos principais de tags, as box-level(Quebram a linha para inserir seu conteudo, e quebram a proxima linha para o proximo conteudo ex: <p>) e inline-level(permanecem na mesma linha inserindo seu conteudo).
+//2-Caixas: agora sim podemos falar que uma caixa é qualquer tipo de tag, sendo que cada tag tem sua devida funcionalidade, e vai possuir um dos 2 tipos acima. Agora propriedades de qualquer caixa, 1-Vai ter o espaço do conteudo e das bordas. 2-Entre o espaço das bordas e conteudo teremos o padding. 3-Acima da borda teremos o espaço de margem. 4-E grudado acima da borda teremos o outline(menor que a margem). Perceba que certas tags já adicionam estilos as caixas, podemos renomear as configurações
+//3-"display: inline/block". Serve para configurar o tipo de caixa que será nossa tag.
+//4-"height: xpx" e "widht: xpx". Servem para delimitar o tamanho do espaço do conteudo da caixa. No começo, esse espaço sempre será delimitado como o maximo de largura na linha. é o espaço doo conteudo da caixa apenas. Ele é justamente prenchido pelo background-color que também vai prencher o padding, caso exista, background vai do conteudo até a borda.
+//5-Comandos de borda: 1- "border-widht: xpx", é a largura/grossura da borda. 2-"border-style: solid/dashed.. etc", são os estilos que a borda pode assumir. 3-"border-color: ", a cor da borda.
+//6-Shorthand para borda: "border: 10px solid red"(Define a largura,estilo e cor da borda, respectivamente).
+//7-Comandos para padding: 1-"padding-top: xpx", controlar a altura.2-"padding-right: xpx", controlar a parte da direita. 3-"padding-bottom: xpx", controlar a parte de baixo. 4-"padding-left: xpx", controlar a parte da esquerda.
+//8-Shorthand para padding: "padding: 10px"(aplica 10px em todas as direções, 10 px de tamanho para todas as direções no padding.) ou "padding: 10px 20px 30px 40px"(vai adicionando no sentido horário, do topo e indo para direita)
+//9-Comandos para Margin: 1-"margin-top: xpx", controlar a altura.2-"margin-right: xpx", controlar a parte da direita. 3-"margin-bottom: xpx", controlar a parte de baixo. 4-"margin-left: xpx", controlar a parte da esquerda.
+//10-Shorthand para Margin: "margin: 10px auto 10px auto"(Adiciona o tamanho no sentido horário, do topo pra direita)(Esse auto, na margem, serve para eu centralizar minha caixa tanto da direita quanto da esquerda, então a caixa tá centralizada horizontalmente, não serve verticalmente) ou "margin: xpx", que adiciona x em todas as direções.
+//11-Comando para Outline: 1-"outline-width: xpx", adiciona a largura/grossura. 2-"outline-style:solid/dashed.. etc", estilos da minha outline. 3-"outline-color:", cor da minha outline
+//12-Shorthand para outline: "outline: 5px dashed red"(Coloca a largura, estilo e cor, repectivamente)
+//13-Comandos verticais para caixas do tipo inlline não funcionam
+
+//1-Estrutura de um site: É bom entender que a estrutura principal de um site é o Cabeçalho, Conteudo Principal e Rodapé, para melhor organização e compreensão do codigo. Lá atrás, como dividiamos esses conteudos no html, com <div id= "Cabeçalho>" e assim por diante, Agora no html conseguimos organizar esse conteudo direto com a tag "header", que tem o mesmo sentido, porém é mais pratico pois escrevmos direto.
+//2-Tags "header" "main" "footer", são as tags para organizar o codigo do nosso site Cabeçalho, Conteudo e Rodapé. Como vimos acima, elas não passam de div, portanto não realizam nada, mas mantem a organização e sentido semantico do nosso site.
+//3-Tags "session" "article" "aside", são tags semanticas/div do mesmo jeito das de cima. Porém, elas serão usadas: 1-section:Dividir assuntos. 2-article: conteudo independente(imagine se pode tirar do site e ser entendido da mesma forma). 3-aside: conteudo complementar ao site(propagando,comentario,link,biografia). Estarão dentro das minha tags semanticas principais(header, main e footer)
+//4-Dica, vamos usar toda hora ">" no css por causa dessas tags semanticas.
+//5-Tag "nav", é a tag que vai agrupar os links de navegação do site. Menu do site, normalmente localizado abaixo do cabeçalho.
+//6-Sombra na caixa: "box-shadow xpx xpx xpx rgba()",(delocamento para direita, deslocamento para baixo, o quanto a sombra fica espalhada e cor, respectivamente) é um shorthand para adicionar sombra a caixa. Adendo, se colocarmos numero negativo nos dois primeiros numeros nós deslocamos a sombra para o sentido contrario. E se colocarmos 0 para os deslocamentos ele faz em todas as direções. Podemos colocar no texto também text-shadow, e mesma logica
+//7-Arredondamento de vertices: "border-radius: xpx ou x%", dizemos o quão a caixa vai se arredondar atraves de seus vertices, podemos medir isso com px ou de 0 a 100%.
+
+//App para planejar layouts de sites: Figma. Planeje onde cada coisa vai ficar antes nesse app. 
+
+//1-Colocar Variaveis(importante): ":root{ --Nome: cor ou fonte; --Nome2: cor ou fonte;}". Chamamos a pseudoclasse, apenas, e colocamos varias variaveis iguas a fontes ou cores, pois usamos elas toda hora, e se tiver que mudar, mudamos apenas o valor a variavel atribuido e economizamos tempo.
+//2-Defina a paleta de cores, as fontes e atrele a variaveis e o proprio visual vai indicar sua variavel para ser selecionada, tanto na cor quanto na fonte.
+
+//1-Dicas:DICA SUPREMA: vamos usar "*{margin: 0px; padding: 0px}. Pois existem tags que já são pré-configuradas com tamanhos no padding e na margin, usando isso tiramos de todas as tags e fica mais facil configurar a posição de cada coisa.
+//2-Outra Dica: Separe Bem comandos das cores e fontes dentro de uma caixa, ou seja comandos que mexem em elementos dentro da caixa, para comandos da propria caixa.
+//3-Algumas Imagens não vem, por padrão, como bloco, só configurar atraves do display, para centralizar.
+//4-"transition-duration: xs", isso é um tempo que podemos colocar dentro do "hover" para ele se transformar na configuração que colocamos. Colocar um padding dentro do hover deixa mais animado também.
+//5-max-wtdh para imagens que são pequenas e tem que permanecer pequenas, e para determinar o espaço do meu main para se tornar pratico de ler.
+//6-Dica Suprema 2: No css, quando queremos pesonalizar tags dentro do header, main  e footer, basta escrever main h1{} que ele vai pegar todos os h1 dentro da main, isso para qualquer tag dentro das 3 tags semanticas principais. Não é necessário escrever 1 por 1(ex: main>article>h1 , main>aside>h1. Não faça isso se quiser personalizar todos)
+
+//1-Responsavidade em sites: Ser responsivo é se adaptar a varias tipos de tipos diferentes de tela, meu site. Tem que manter a forma para diferentes tipos de tela.
+//2-A partir disso a ideia é: vamos limitar o tamanho minimo que nosso site vai ter e o tamanho max em pixels, pois teremos é mais facil planejar o projeto com um tamanho fixo, dai pensando em qual tipo de plataforma estivermos adaptamos as imagens, podendo ser imagens dinamicas, os videos e os audios. As fontes normalmente se ajustam sozinhas para diferentes tipos de tela.
+//3-Baixamos uma extensão Widow Resizer, que mostra os deferentes tamanhos de tela e como nosso site fica.
+//4-"max-witdh: xpx" #min-witdh: xpx. Define o tamanho max e min, repectivamente, de tela para nosso site. Podemos usar para height também caso queria que uma caixa sempre trnha espaço vertical
+//4.1- A logica é, quer que sempre tenha espaço naquela caixa use max e min, quer que tenha para um tipo de tamanho use normalmente os comandos
+//5-"width: x%"" ajusta a  largura da imagem, com base na largura da minha janela, dai englobando todos os possiveis tamanhos. 100% para todo o bloco. 50% para metade do bloco e depois centraliza.
+//6-Margem com '-x', numero negativo. Ele inves de aumentar o espaço entre a borda e a caixa externa, ele vai aumentar o espaço total da caixa para a caixa externa. Então podemos aumentar o espaço de conteudo com a margem negativa ou comandos que mexem direto no conteudo.
+
+//1-Css para listas
+//2-"list-style-position: inside;" Para posicionar aonde vai ficar os pontos/numeros/circulos da lista, "inside" para colocar dentro da tag que engloba a lista. Mas podemos posicionar de outras formas também.
+//3-"columns:x". Para decidir quantas colunas terá na minha lista.
+//4-"list-style-type: '' ". Ele vai susbtituir pelo o que você botar no '' os pontos/numeros/alfabetico.
+
+//Centralizar video em um site. Melhor maneira é criar um div com classe video, e pense que o video é como se fosse uma letra, dai podemos centralizar com text-aling: center;.E podemos costumizar o bloco div ainda. E personalizar o tamanho do conteudo normalmente com propriedades de caixa que estudamos
+
+//Colocar simbolos no css: Você vai no site emojipedia.org, Pesquisa o simbolo que quer, sempre vai começar com "\" e terá um codigo no site que você colocara(em numeros e letras). Você pode colocar toda hora no codigo entre as '' que o proprio codigo quando executado desenhara essa imagem na respectiva posição.

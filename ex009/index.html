@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens Dinamicas</title>
+</head>
+
+<body>
+    <h1>Imagem Dinamica</h1>
+    <p> Vamos colocar uma imagem dinamica aqui, diminua a tela do navegador para ver, é feito entre a
+        tag <strong>picture</strong> , para indicar que alguma
+        imagem será colocada, depois usaremos a tag <strong>img</strong> para se referir a maior imagem que vamos admitir até o infinito, e botaremos varias tags
+        <strong>source</strong> que vão servir como uma especie de condição para novas imagens menores entrarem(Na verdade a tag source sempre será no sentido de condição para importar videos, fotos, audios), na parte da
+        <ins>media</ins> vamos definir o <strong>max</strong> de largura que a imagem vai assumir
+        , e no srcet botamos o caminho da imagem, lembrando que a imagem maior não terá a source pois ela não tem limite
+    . A logica é, o site sempre vai tentar abrir a primeira imagem que der de cima para baixo no codigo, por isso a condição é importante e a ordem.
+    </p>
+    <picture>
+        <source media="(max-width: 500px )" srcset="imagens/Pequena.png">
+        <source media="(max-width: 1000px )" srcset="imagens/Media.png">
+     <img src="imagens/Grande.png" alt="">
+    </picture>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos</title>
+</head>
+
+<body>
+    <h1>Videos do proprio arquivo:</h1>
+    <p>Utilizamos a tag <strong>video</strong> para incorporar videos do computador, terá a mesmissima logica e sintaxe
+        dos audios, porém podemos usar comando como <ins>poster = ""</ins> e
+        <ins>width = "x"</ins>(500 é uma boa referencia) para medir o tamanho do video: (controls tanto em audio e video
+        é crucial)
+    </p>
+    <video controls poster="images.jpg" preload="metadata" width="500">
+        <source src="arquivo.mp4.mp4" type="video/mp4">
+        <p>Seu Navegador não suporta Mp4</p>
+    </video>
+    <p>O type nesse caso será type="video/mp4" para o video mp4</p>
+    <hr>
+    <h1>Videos do youtube:</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/5Kvnfecwb60?si=wKEwhnFVm349QCyQ"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <p>Só control c e v no incorporar que aparece um codigo no youtube, talvez tenha que abrir com five server</p>
+
+</body>
+
+</html>

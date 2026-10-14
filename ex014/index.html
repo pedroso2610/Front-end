@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em Html, id, class e pseudos.</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+        body {
+            /*font-family: Arial, Helvetica, sans-serif;
+            font-size: 1em;
+            font-weight: bold;
+            font-style: italic;*/
+            font: italic bold 1em Arial, Helvetica, sans-serif;
+            text-align: justify;
+            background-color: rgba(255, 0, 0, 0.281);
+        }
+
+        p {
+            text-indent: 30px;
+        }
+
+        h1 {
+            font-family: "Satisfy", cursive;
+            font-weight: normal;
+            font-style: normal;
+            text-align: center;
+            background-color: rgba(6, 143, 131, 0.836);
+        }
+
+        .mudanca {
+            font-style: normal;
+            color: blueviolet;
+        }
+
+        h2 {
+            text-align: center;
+            color: blue;
+        }
+
+        h2#Primeiro {
+            color: red;
+        }
+        
+        div{
+            text-align: center;
+        }
+        
+        div>button:hover{
+            color: yellow;
+            background-color: brown;
+        }
+        button{
+            background-color:black;
+            color: white;
+            border:2px solid gray
+        }
+        
+        div>button:active{
+            background-color: rgb(22, 13, 150);
+        }
+        
+        div::after{
+            content: '<--';
+        }
+        
+        div::before{
+           content: '-->';
+        }
+
+</style>
+
+
+</head>
+
+<body>
+    <h1>Vamos Trabalhar com fontes</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex culpa explicabo ullam, eius in eum atque omnis
+        provident saepe ducimus expedita accusamus excepturi sint a natus beatae aspernatur officiis maxime!</p>
+    <h2 id="Primeiro">Subtitulo do exercicio</h2>
+    <p class="mudanca">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus ipsam neque assumenda
+        recusandae ex, quaerat
+        ea ducimus tenetur veritatis accusamus animi sint magnam maiores autem distinctio suscipit perspiciatis aliquid
+        at.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa neque nobis eligendi delectus dolorem velit
+        impedit, doloremque quibusdam debitis, praesentium necessitatibus odit molestias assumenda, voluptate sapiente
+        itaque minus officiis repellendus?</p>
+    <div><button>Clique aqui</button></div>
+    <h2>Outro Subtitulo</h2>
+    <p class="mudanca">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio odit eaque deleniti explicabo dicta dolorem
+        ratione porro officiis, earum consequatur esse enim ipsum numquam commodi dolore officia, praesentium a sit
+        perspiciatis ex non asperiores rerum! Molestiae commodi dolor vel quaerat, esse provident minima? Neque
+        architecto excepturi nisi, illum earum ab magnam recusandae voluptatum quasi, quam inventore, sit ullam
+        assumenda? Rerum eveniet facilis quis quidem nesciunt accusantium nihil, porro maxime animi adipisci et cumque
+        ullam voluptates asperiores, autem nobis, qui quae ab. Numquam esse porro dignissimos, incidunt magnam
+        asperiores nemo! In impedit ipsum, provident atque nihil officiis. Molestias nesciunt itaque aspernatur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores soluta doloremque qui? Eligendi explicabo vitae
+        sed fugit earum ipsam voluptatem itaque cumque cum esse commodi voluptates, quasi sapiente aspernatur expedita?
+    </p>
+
+</body>
+
+</html>
