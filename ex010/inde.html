@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio</title>
+</head>
+
+<body>
+    <h1>Vamos adicionar alguns audios:</h1>
+    <p>Vamos focar em adicionar audios em formato:<strong>mp<sup>3</sup></strong> e <strong>ogg</strong> <del>caso
+            tenha</del>
+    </p>
+    <p>Porém, antes vamos colocar 3 Regras gerais:
+    <ol type="1">
+        <li>Sempre que trabalharmos com a tag source,
+            vamos botar ela entre as tags, nunca dentro de uma tag
+        </li>
+        <li>
+            As tags de midia serão colocadas fora das tags de paragrafo, e as tags de midia são: <ul>
+                <li>audio</li>
+                <li>picture</li>
+                <li>video</li>
+            </ul>
+        </li>
+        <li>
+            A tag para importar qualquer coisa será a src
+        </li>
+    </ol>
+    </p>
+    <audio controls preload="metadata">
+        <source src="Here For A While - Everet Almond.mp3" type="audio/mpeg">
+        <p>Navegador não suporta o aúdio, baixa o audio em mp3: <a href="Here For A While - Everet Almond.mp3" download="">CLique aqui</a></p>
+    </audio>
+    <p>No caso, do audio, podemos botar dentro da primeira tag de audio, comandos como: controls(mostrar o play de audio), loop, muted e preload</p>
+    <p>E é importante colocar o tipo de audio, no caso <code>type="audio/mpeg"</code> para mp<sup>3</sup>, que vamos mais utilizar.</p>
+     <p>E perceba no codigo que colocamos um adendo caso o audio não abra, ou seja o source não seja bem sucedido</p>
+</body>
+
+</html>

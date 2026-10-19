@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com Links</title>
+</head>
+
+<body>
+    <h1>Links externos:</h1>
+    <p>Links que sobrepõem meu site <a href="https://www.youtube.com/watch?v=w6m_QPzWwEI">Clique aqui krl </a>, usamos a
+        tag <strong>"a".</strong>
+        Note que terá 2 espaços para botar o link:
+    <ol>
+        <li>entre os ""</li>
+        <li>e outro para escrever<ins> a frase</ins> que estara atrelada ao link no site</li>
+    </ol>
+    </p>
+    <p>Links que abrem o conteudo em outro aba <a href="https://www.youtube.com/watch?v=w6m_QPzWwEI" target="_blank"
+            rel="external">Clique como um bom garoto</a>, mesma tag "a", e perceba que agora tem 2 espaços
+    <ul>
+        <li>O espaço de colocar "target blanck" que é o que vai fazer mandar o usuario pra outra aba</li>
+        <li>E o outro espaço para garantir maior segurança <ins>"rel = external"</ins></li>
+    </ul>
+    </p>
+    <h1>Link interno:</h1>
+    <p>Links de arquivos do computador <a href="../ex007/inde.html"> Clique Aqui</a>, e como o de cima, poemos colocar
+        target "_black" para abrir <ins>em outra aba o link</ins><br>
+        E podemos colocar o rel "external/prev/next/unfoloow(propaganda)" dependendo do contexto para garantir semantica
+        e segurança.</p>
+    <p>Adendo, existe o target"self" para sobrepor o site, podemos colocar só para ficar mais formal o codigo.</p>
+    <br>
+    <h1>Link para download:</h1>
+    <p>Vamos colocar 2 tipos de links para download: <br>
+    <ul>
+        <li>Link de um Pdf <a href="MRUV.pdf" download>Clique aqui</a></li>
+        <li>Link de arquivo <a href="../ex007/" download>Clique aqui</a></li>
+    </ul>
+    Para selecionar que seja download, basta adicionar dentro da tag <strong>a</strong> a função de "download". E temos
+    que abrir o arquivo com five server</p>
+</body>
+
+</html>

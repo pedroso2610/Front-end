@@ -1,0 +1,61 @@
+//html só faz a logica para o front do site, a estilização(a beleza vem pelo css)
+//index: nome para a pagina inicial do meu site, padrão do chrome quando subir o site no ar.
+//! abre já a configuração pre site, o codigo base que vou fazer tudo. primeira linha, informa que um tipo html.Segunda linha, informa o idioma. O Espaço de head informa algumas configurações, seja de escrita ou titulo do arquivo no navegador. Body será a parte visivel do nosso site.
+//meta utr-8 é para compilar acentuação no meu site
+// Nosso navegador entende o que é cada coisa atraves das tags
+//titulos de body: h1(mais importante), h2(segundo mais importante) até o h6. Existe uma hierarquia o H1 engloba o H2, e o H2 engloba o H3 e assim por diant. Isso importa para a Semantica, não é o tamanho é o sentido.
+//tags sempre começam com <assim> e terminam </assim> note que abre o espaço com <> e termina com uma barra</>. Contudo nem todas as tags possuem final. Tags vão cordenar a semantica do meu texto.
+//<hr> serve para pular e adicionar uma linha horizontal no texto 
+//paragrafo, também só no body, e é feito entre tags <p> </p>
+//<br> serve para quebrar linhas de texto em um paragrafo, pular linhas.
+//<!-- tudo assim é comentario em html, <!---->, desse jeito-->
+ //&lt;&gt;<!-- Simbolo de menos e de mais, Vai perceber que para adicionar
+                 figuras, sempre começamos com & e termina com ;-->
+//&#x1F596; <!-- Emojis sempre começam com &#x e terminam com ;, porém são identificados em uma site com codigo que ficara entre as marcações de inicio e fim-->
+//site:emojipedia.org
+
+//1-Trabalho com fotos, Primeiro tem de entender que nem toda podemos pegar, existem direitos autorais, então fotos para sites podemos pegar apenas aquelas em determinados sites ou filtradas no google
+//2- Existem 2 tipos de arquivos de imagem, Resumindo: Pne para logos ou simbolos, e Jpeg para fotos em completo, Pne pois elimina o fundo e garante qualidade na prioridade, Jpeg que elimina alguns artificios da imagem toda.
+//3- porém temos que formartar essa imagem para o nosso site para isso utilizamos um app gratis GIMP, tipo o photoshop, e controlamos pricipalmente o tamanho e qualidade para o nosso site
+//4- uma imagem largur x altura, tem de ter no maximo 1500 de largura.
+//5- Para colocar a imagem no codigo fazemos "img" enter vai abrir uma tag e terá um scr que colocaremos o nome da nossa foto, tem que estar na mesma pasta aberta a foto, caso contrario temos que adicionar o caminho da pasta. Podemos controlar a seleção de imagem por control espaço. O alt é apenas para colocar no codigo o que é essa imagem.
+//6- Podemos colocar imagens de sites, só colocar o url dele no mesmo lugar de src.
+
+//1-Icones de navegador, podemos pegar eem 2 sites: 1-O favicon. 2- O iconarchive, vamos baixar esses icones e adiocionar nas pastas, Tem que ser um tipo de imagem ".ico". 
+//2-Depois para colocar vai ser no campo de head, vamos digitar "link:favicon" enter, após isso vamos apagar a frase favicon.ico e dar control espaço e selecionar nossa imagem. As aspas anteriores serão para descrever o que tem na nossa imagem, para leitura do site e do codigo.
+
+//Se eu digitar "lorem" e enter em um paragrafo ele vai encher um monte de palavra blá blá blá
+
+//Em Html não importa o formato do texto, apenas os sentido das tags, sua sematica, o que cada coisa é.Então não ligue se o texto tá de tal jeito no rascunho de html. Até que varias tags que eram pra formato, se tornaram obseletas, em desusu e não recomendadas
+
+//1-Formatações de sentido para o sistema html.
+//2-Negrito e italico. 1- pode ser com tag strong ou b, porém usaremos strong pois ele tem sentido para o sistema html que aquela informação e de destaque, o b apenas muda a forma. Italico, pode ser em ou p, porém só usaremos em pelo mesmo sentido.
+//3-Resumindo: Negrito-strong, Italico-em.
+//4-Marcação: use a tag mark para deixar o texto marcado
+//5-Texto sobrescrito e subscrito: 1-Sobrescrito usa a tag "sup", 2-Subscrito usa a tag "sub".
+//6-Texto deletado(com um risco), usa a tag "del"
+//7- Texto sublinhado/inserido, usa a tag "ins".
+//8- Manter a forma do texto no site do mesmo jeito do codigo fonte, utiliza a tag "pre".
+//9- Colocar codigo fonte, usa a tag "code".
+//10- Colocar abreviações, passa o cursor em cima e aparece informação, usa a tag "abbr", voce colocara o significado no meio dos "" do title.
+
+//podemos envolopar uma palavra com tags diretamente usando control shit p.
+
+//1-Listas Ordenadas: Usamos a tag <ol type=""><li></li> </ol>,que para cada elemento dessa ela estará dentro de uma tag li, e temos 3 tipos para o jeito que cada um será ordenado, 1(numeração), A ou a (alfabetica), I ou i (Romana). E também não importa como escreve que cada elemento estará em uma linha diferente.
+//2-Listas não Ordenadas: Usamos a tag <ul type=""><li></li> </ul>,que para cada elemento dessa ela estará dentro de uma tag li, e temos 3 tipos para o jeito que cada um será ordenado, Circle, Square, Disc. E também não importa como escreve que cada elemento estará em uma linha diferente.
+//3-Podemos misturar listas ordenadas e não ordenadas do jeito que quiser, isso serão listas mistas
+
+//1-Colocar link: vamo usar a tag "a" e enter, vai abrir um espaço para colocar o link entre os "" e outro para colocar o nome atrelado a esse link.
+//1.1- Podemos colocar comando como target="_blank" rel="external" para o link ser aberto em outra aba e garantir uma segurança ao abrir em outra aba.
+//2- E podemos colocar links de outras paginas do site, é só colocar o diretorio do arquivo no mesmo lugar de colocar link(subpastas e aquivos da propria pasta), control espaço(como no favicon). E podemos usar a mesma forma para abrir o link em nova aba, podemos usar mecanismo de "next" e "prev" no espaço de rel, para manter uma semantica no meu sistema, ou até unfollow se for propaganda. Não precisa de target, pois queremos sobrepor essa pagina
+//3- use "../" para voltar o diretorio na b hora de colocar arquivos, como favicon, imagens e links.
+//4- Download, basta adicionar a função de "download" dentro da tag A e tem que abrir com five server o documento.
+
+//1-Importações de midia: Video, Picture, e audio. Regras gerais: tags fora de <p></p>. Source entre as tags para condições. Comandos dentro da primeira tag
+//2-Imagens dinamicas, melhor conferir o ex009 que vai entender melhor: Resumindo: Picture: para falar que alguma imagem vai aparecer. Source para adicionar condições para aparecer imagem. Img para adicionar a maior imagem
+//3-Audio: confira o ex 010, que está tudo explicado, mas resumindo: Tag "Audio" para falar que vai aparecer algum audio, e dentro dessa mesma tag pode ter comandos como controls, muted, loop, e preload. tag "source" para colocar como condição de audio ser aberto, tag "scr" sempre para importar algo, tag "type" para apenas informar o tipo de audio.
+//3.2- Temos o tipo de audio ogg, dai teremos que colocar outro type no source.
+//4-Tag preload: É importante destacar que vamos sempre utilizar o tipo metadata, pois é a que vai carregar algumas informações mas não o conteudo até que você clique start. Das opções de em cima para baixo, é o que baixa tudo para o que baixa nada.
+//5- Videos: Podemos pegar videos(sem direitos autorais no Pexels), temos padõres: mp4(mais usado), M4V e web4 que vamos utilizar. Vamos utilizar o aplicativo handbreak para diminuir o tamanho do video ou ate converter entre os padroes. Porque temos
+//5.1: Para aplicar os videos no codigo agora, uma vez convertidos. a Tag é "video" e vai seguir a mesmissima logica do audio. Só 2 acrecentos, 1-usamos o comando "width = "x"" (500 é uma referencia) para medir o tamanho do video no site e "poster""" que vamos poder incorporar uma tamb pro nosso video. Porém, quando subimos videos do proprio site aumentamos o preço para o site está hospedado na rede, por isso podemos usar importar videos do youtube para diminuir o preço, pois estara em outro servidor.
+//5.2 Pegar video no youtube: vá no video, na parte de compatilhar e clique em incorporar, que vai copiar um codigo e colar no seu html. Talvez tenha que abrir com five server para ir.
