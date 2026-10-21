@@ -120,7 +120,7 @@
 //11-Mesclagem de cédulas,ex:"<td/th colspan/rowspan="x">. Podemos fazer uma cédula prencher x colunas(colspan) ou x linhas(rowspan), ou os dois ao mesmo tempo, ou seja define o tamanho de uma cédula na tabela. O comando é feito dentro da tag td ou th. Visualize como vai ficando e adaptando.
 //11.2-Dica: vizualize onde começa o topo(PRINCIPALMENTE) de cada cédula e a esquerda de cada cédula, para vizualizar em qual linha fica cada cédula, para transformar do jeito que quer.
 //12-scope de grupos. Quando temos uma mesclagem de cédulas, normalmente, estamos nos referindo a várias linhas ou várias colunas, dai quando vamos definir o scope do th fazemos uma pequena alteração, "colgroup" para colunas "rowgroup" para linhas, se atente se seu th se refere realmente a varias linhas ou colunas e coloque a pequena correção. E pode realizar a mesma logica de style para essas tags, se necessário.
-
+//13-Responsividade para tabela: "div{overflow-x/y: auto;}". Vamos envelopar toda minha tabela dentro de uma div, bote id se necessário para mexer somente nela, e vamos colocar overflow x ou y dependendo para onde minha tabela está vazando, para horizontal ou vertical, respectivamente, sendo assim criando uma barra de rolagem somente para a tabela e deixando o resto da pagina funcionando normalmente. 
 
 //1-Dicas:DICA SUPREMA: vamos usar "*{margin: 0px; padding: 0px}. Pois existem tags que já são pré-configuradas com tamanhos no padding e na margin, usando isso tiramos de todas as tags e fica mais facil configurar a posição de cada coisa.
 //2-Outra Dica: Separe Bem comandos das cores e fontes dentro de uma caixa, ou seja comandos que mexem em elementos dentro da caixa, para comandos da propria caixa.
