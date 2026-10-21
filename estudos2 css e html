@@ -1,5 +1,5 @@
 //É o que vai custumizar/Personalizar meu site.
-//1- 2 jeitos de trabalhar css: 1- vamos abrir uma tag "style" na parte de head do codigo, é dar estilo a cada tag que a gente quiser, ex: head{background color "azul"}, exemplo meramente ilustrativo, podemos configurar os estilos desse jeito. Sempre vamos colocando um comando e ";" , dentro das chaves.
+//1- 3 jeitos de trabalhar css: 1- vamos abrir uma tag "style" na parte de head do codigo, é dar estilo a cada tag que a gente quiser, ex: head{background color "azul"}, exemplo meramente ilustrativo, podemos configurar os estilos desse jeito. Sempre vamos colocando um comando e ";" , dentro das chaves.
 //2- Segundo jeito é a gente criar um arquivo.css(temos que colocar primeiro de tudo @charset "UTF-8", para não ter incompatibilidade de caracteres) e colocar(sem a tag style) os estilos diretos de cada tag no arquivo, dai para vincular ao arquivo html vamos lá no head do html e colocar "link::css" e enter, dai na parte de "href" vamos colocar o arquivo css que realiza a conexão.
 //3-tem até um terceiro jeito, porém ele não viavel, mas é na propria tag(seria a primeira) você botar style e descrever como serão as coisas nessa especifica tag.
 //4- Um adendo, a tag mais especifica, que foi selecionada o estilo, será a que vai mudar o conteudo. Ex: Mudei o estilo do body, mas ele só vai influenciar o <p> se não houver nenhum estilo que sobrepõe o estilo da tag body.
@@ -9,6 +9,7 @@
 //3-Adobe color: Podemos colocar de outro jeito no codigo que atraves de uma maneira hexadecimal(background color: #00AAFF) que define do mesmo jeito o tanto de red, green e blue. E pegamos no adobe colors na parte de explore, a paleta de cores que queremos trabalhar, sendo que o espectro cromastico é a ferramenta mais utilizada para o estudo de psicologia das cores.Pode pegar uma imagem e jogar no app pra detectar todas as cores também
 //4-Collorzilla: Podemos pegar cores também atraves do collor zilla, exetensão do chrome que vai dar o codigo em hexadecimal de uma cor encontrada em um determinado site.
 //5-Como realizar um degrade no fundo do site: vamos configurar a parte do body, e iremos colocar "min-height: 100vh;" "background: linear-gradient(to bottom, blue, white);". A primeira parte é para informar que o degrade irá prencher a tela toda que se encontra a tag (util com direções de top ou bottom), e a logica do degrade é (aqui informa a direção(to right, to button, to top, 45deg(isso é angulo)), aqui informa cor, de novo cor, quantas quiser), pode colocar a procetagem da cor que vai aparecer tambem. 
+
 //Caso veja um *{}, isso significa que é uma configuração que vai servir para todas as tags, css global.
 //Caso veja h1, p, etc{}. Significa que as tags respectivas terão tal configuração.
 
@@ -100,6 +101,27 @@
 //8-Dica top "Efeito paralax": se usarmos "cover" e "fixed",  independente do conteudo, a tela de fundo da caixa sempre será a imagem que colocamos inicialmente antes do fixed, ela não vai transitar junto com a barra de rolagem, pois ele prenche tudo e não é afetado pela barra de rolagem. Dando assim, umas SENSAÇÃO 3D.
 //9-Shorthand: "background: color image position / size repeat attachment" (ex:background: black url(imagens/wallpaper002.jpg) center top / cover no-repeat fixed;).
 
+//1-Utilizar Tabelas: Vale começar dizendo que tabelas possuem um display: table. Tabelas são viaveis em alguns casos para fazer sites, porém não existe mais aquilo de planejar um site atraves de tabelas, mas utilizar tabelas ainda é valido.
+//2-Tags "table" "tr" "td": ex: "<table> <tr> <td> A1 </td> <td> B1 </td> </tr> </table>". São as 3 tags que vamos utilizar para criar a tabela, a tag "table" serve para limitar o espaço que vamos colocar a tabela. A tag "tr" é para limitar cada linha da tabela, primeira linha, segunda linha ..etc. A tag "td" é para limitar o conteudo de cada cedula dentro da respectiva linha, primeira cedula, segunda cedula ...etc.
+//3-Css. Dai teremos alguns comandos especificos para tabela, mas podemos utilizar os mesmo comandos de fontes, de caixas, e de cores, id/class, qualquer coisa que você ache viavel para colocar. Só utilize a cabeça para qual tag/parte da tabela você quer mexer, table será a tabela toda, tr será a linha, td a cédula e assim por diante, PENSE.
+//4-"border-collapse: separate/collapse". É como as bordas de cada cédula ficarão(dai temos que colocar um border no td), colocamos na tag "table", separate para ficarem separadas, collapse para ficarem juntos(mais utilizado).
+//5-"vertical-align: top/middle/bottom", serve para decidir se o conteudo de tal cedula, estara no topo, no meio ou embaixo da cedula
+//6-"thead" "tbody" "tfoot". Tags que vão decidir a semantica para tabelas grandes, mesma logica da estrutura de site. thead vai ser o cabeçalho da minha tabelas. tbody vai ser o conteudo principal. tfoot vai ser um resumo das informações, um total.
+//6.1-Colocamos essas tags antes dos tr td, as semanticas são as principais, é dentro delas que estarão o tr e td.
+//6.2- Da mesma forma podemos utilizar thead td{}, no css, que vai pegar todos os td no thead, mesma coisa para as tbody tfoot, e mesma logica das tags semanticas header main footer.
+//7- tag "caption", é uma tag que vai escrever um espaço acima da nossa tabela, ela será o titulo da nossa tabela, depois virão as tags semanticas, e tudo isso está dentro da tag table.
+//8-diferença para tags "th e td", as duas vão delimitar o espaço de conteudo para uma cédula em uma determinada linha(tr, estão dentro dela), porém th tem o valor semantico de delimitar os tipos de dados que serão apresentados na vertical ou na horizontal, por isso colocamos dentro de sua tag um "scope="col/row"", para se refirir se é na vertical ou na horizontal que ele está se referindo aos tipos dos dados. td é só para delimitar o dado que o th está se referindo.
+//8.1-Resumindo: th para os tipos de dados e scopo (ex: <th scope="row/col"> A1</th>). Td só para os dados que o th se refere(ex:<td> A1</td?). Cheque o ex017 (tabela002), para ver se fica mais claro.
+//8.2-Colocado o scope para os th, podemos configurar o estilo daquela cédula e a coluna ou linha que ele se refere aos seus dados, para isso botamos o estilo de css inline(aquele não viavel), logo após o scope, colocando a caracteristica que a gente quiser para aquela cédula e a fila que se refere.
+//9- Efeito zebrado: Pseudo-classe "tag:nth-child(yn){}", essa pseudo classe vai lendo de cima para baixo o codigo, aplicando na tag o que você decidir entre as "{}"" em ordem de yn, sendo y variando (y>=1), ex: "y=2, pega a segunda tag que detectar e aplica, repete, pega a segunda tag que detectar e aplica e assim vai".
+//9.1-Podemos colocar no lugar "yn", odd(impares)(2n-1 também) e even(pares)(2n também) para se referir a qual sequencia de tags vai pegar. 
+//10-ESPECIAL:"position: sticky; top: xpx/bottom: xpx/left: xpx/ right xpx;" Esse comando serve para tudo, não só para tabelas,usamos quando a gente quer que uma caixa/tag fique grudada em um canto da tela quando a gente ultrapassa ela na pagina com a rolagem vertical ou horizontal. Então, quando passamos da caixa com a rolagem definimos aonde ele vai ficar na pagina com top bottom left e right e sendo x qualquer numero e px(pixels) depois.
+//10.1- E a tag grudada acaba quando o espaço da tag PAI acaba também, então para tabela utilizar isso no thead, tbody ou tfoot é bom.
+//11-Mesclagem de cédulas,ex:"<td/th colspan/rowspan="x">. Podemos fazer uma cédula prencher x colunas(colspan) ou x linhas(rowspan), ou os dois ao mesmo tempo, ou seja define o tamanho de uma cédula na tabela. O comando é feito dentro da tag td ou th. Visualize como vai ficando e adaptando.
+//11.2-Dica: vizualize onde começa o topo(PRINCIPALMENTE) de cada cédula e a esquerda de cada cédula, para vizualizar em qual linha fica cada cédula, para transformar do jeito que quer.
+//12-scope de grupos. Quando temos uma mesclagem de cédulas, normalmente, estamos nos referindo a várias linhas ou várias colunas, dai quando vamos definir o scope do th fazemos uma pequena alteração, "colgroup" para colunas "rowgroup" para linhas, se atente se seu th se refere realmente a varias linhas ou colunas e coloque a pequena correção. E pode realizar a mesma logica de style para essas tags, se necessário.
+
+
 //1-Dicas:DICA SUPREMA: vamos usar "*{margin: 0px; padding: 0px}. Pois existem tags que já são pré-configuradas com tamanhos no padding e na margin, usando isso tiramos de todas as tags e fica mais facil configurar a posição de cada coisa.
 //2-Outra Dica: Separe Bem comandos das cores e fontes dentro de uma caixa, ou seja comandos que mexem em elementos dentro da caixa, para comandos da propria caixa.
 //3-Algumas Imagens não vem, por padrão, como bloco, só configurar atraves do display, para centralizar.
@@ -111,3 +133,5 @@
 //9- Caso especial de body com background-color. O tamanho do nosso body varia de acordo com o tamanho do conteudo dentro, porém o background-color prenche a tela inteira, porque? Pois, por configuração, caso minha tag html não tenha fundo definido, ela herda meu background color do body. Então, o tamanho do body não é o que tá sendo colorido nesse caso, fique com isso em mente.
 //10-Utilize o max possivel de padding.
 //11- Coloque os comandos, depois adapte para shorthand, para não se enrolar.
+//11-display:inline faz o espaço do conteudo se limitar para o conteudo
+
