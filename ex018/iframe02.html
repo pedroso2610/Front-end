@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navegação por Iframe</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-decoration: underline;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: blue;
+        }
+
+        nav {
+            text-align: center;
+            padding: 5px;
+            line-height: 20px;
+        }
+
+        ul{
+            list-style-position: inside;
+            columns: 3;
+        }
+
+        iframe {
+            width: 90vw;
+            height: 400px;
+            border: 1px solid black;
+        }
+
+        div {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Estudando Navegação de iFrame</h1>
+    <p>Escolha uma opção:</p>
+    <nav>
+
+        <ul>
+            <li><a href="../mini_projeto/index.html" target="Cristina">Primeira opção</a></li>
+            <li><a href="../mini_projeto2/index.html" target="Cristina">Segunda opção</a></li>
+            <li><a href="../ex017/tabela003.html" target="Cristina">Terceira opção</a></li>
+        </ul>
+    </nav>
+
+    <div>
+        <iframe src="" name="Cristina" frameborder="1"></iframe>
+    </div>
+
+</body>
+
+</html>
