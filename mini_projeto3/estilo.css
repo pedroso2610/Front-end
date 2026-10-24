@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: black url(pacote-d013/imagens/fundo-madeira.jpg) center center / cover no-repeat fixed;
+    position: relative;
+}
+
+img#telefone{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 85%;
+    border-radius: 0%;
+    padding: 0px;
+}
+
+img{
+  display: block;
+  margin-left: auto;
+  border-radius: 100%;
+  height: 10vh;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+img.rd:hover{
+    border: 1px dashed white;
+    padding: 0px;
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    transform: scale(1.3,1.3) translate(-10px,0px);
+    transition: all 0.5s ease;
+}
+
+img.re:hover{
+    border: 1px dashed white;
+    padding: 0px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    transform: scale(1.3,1.3) translate(-10px,10px);
+    transition: all 0.5s ease;
+}
+
+
+iframe{
+    position: absolute;
+    top: 50.4%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 406px;
+    width: 231px;
+}
+
